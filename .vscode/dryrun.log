@@ -1,0 +1,20 @@
+make --dry-run --keep-going --print-directory
+make: Entering directory `/Volumes/MacFD - Données/Users/79Prod/42/cursus/rank2/so_long'
+gcc -Wall -Werror -Wextra -g    -c -o src/ft_so_long.o src/ft_so_long.c
+ 
+gcc -Wall -Werror -Wextra -g    -c -o src/ft_collectexit.o src/ft_collectexit.c
+gcc -Wall -Werror -Wextra -g    -c -o src/ft_errors.o src/ft_errors.c
+ 
+gcc -Wall -Werror -Wextra -g    -c -o src/ft_errorsquare.o src/ft_errorsquare.c
+gcc -Wall -Werror -Wextra -g    -c -o src/ft_exitgame.o src/ft_exitgame.c
+gcc -Wall -Werror -Wextra -g    -c -o src/ft_img_init.o src/ft_img_init.c
+gcc -Wall -Werror -Wextra -g    -c -o src/ft_movements.o src/ft_movements.c
+ 
+gcc -Wall -Werror -Wextra -g    -c -o src/ft_paintfct.o src/ft_paintfct.c
+gcc -Wall -Werror -Wextra -g    -c -o src/ft_updatemap.o src/ft_updatemap.c
+ 
+make -C ft_printf
+make -C libft
+gcc -Wall -Werror -Wextra -g  src/ft_so_long.c src/ft_collectexit.c src/ft_errors.c src/ft_errorsquare.c src/ft_exitgame.c src/ft_img_init.c src/ft_movements.c src/ft_paintfct.c src/ft_updatemap.c  ft_printf/libftprintf.a libft/libft.a minilibx/libmlx.a -Lminilibx -lmlx -framework OpenGL -framework AppKit -o so_long 
+make: Leaving directory `/Volumes/MacFD - Données/Users/79Prod/42/cursus/rank2/so_long'
+ 
