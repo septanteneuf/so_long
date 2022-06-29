@@ -6,11 +6,11 @@
 /*   By: bbourcy <bbourcy@student.42lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/20 18:39:05 by bbourcy           #+#    #+#             */
-/*   Updated: 2022/06/20 19:26:11 by bbourcy          ###   ########.fr       */
+/*   Updated: 2022/06/29 07:53:52 by bbourcy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../ft_game.h"
+#include "../so_long.h"
 
 int	ft_checksquare(t_so_long *mygame)
 {

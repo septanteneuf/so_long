@@ -6,11 +6,11 @@
 /*   By: bbourcy <bbourcy@student.42lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/20 18:40:23 by bbourcy           #+#    #+#             */
-/*   Updated: 2022/06/20 19:28:35 by bbourcy          ###   ########.fr       */
+/*   Updated: 2022/06/29 07:54:29 by bbourcy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../ft_game.h"
+#include "../so_long.h"
 
 int	count_mapunit(char **argv)
 {

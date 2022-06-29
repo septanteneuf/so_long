@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../ft_game.h"
+#include "../so_long.h"
 
 void	ft_init_img(t_so_long *mygame)
 {

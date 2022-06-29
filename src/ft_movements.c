@@ -6,11 +6,11 @@
 /*   By: bbourcy <bbourcy@student.42lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/20 18:40:07 by bbourcy           #+#    #+#             */
-/*   Updated: 2022/06/20 19:26:28 by bbourcy          ###   ########.fr       */
+/*   Updated: 2022/06/29 07:54:18 by bbourcy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../ft_game.h"
+#include "../so_long.h"
 
 void	up(t_so_long *mygame)
 {

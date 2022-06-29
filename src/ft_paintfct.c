@@ -6,11 +6,11 @@
 /*   By: bbourcy <bbourcy@student.42lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/20 18:40:15 by bbourcy           #+#    #+#             */
-/*   Updated: 2022/06/20 19:28:26 by bbourcy          ###   ########.fr       */
+/*   Updated: 2022/06/29 07:54:24 by bbourcy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../ft_game.h"
+#include "../so_long.h"
 
 void	ft_paintpath(int x, int y, t_so_long *mypath)
 {

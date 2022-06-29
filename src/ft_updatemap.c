@@ -6,11 +6,11 @@
 /*   By: bbourcy <bbourcy@student.42lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/20 18:42:29 by bbourcy           #+#    #+#             */
-/*   Updated: 2022/06/20 19:28:48 by bbourcy          ###   ########.fr       */
+/*   Updated: 2022/06/29 07:54:35 by bbourcy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../ft_game.h"
+#include "../so_long.h"
 
 void	ft_updatemap(int x, int y, t_so_long *mypath)
 {

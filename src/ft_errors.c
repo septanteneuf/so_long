@@ -6,11 +6,11 @@
 /*   By: bbourcy <bbourcy@student.42lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/20 18:38:58 by bbourcy           #+#    #+#             */
-/*   Updated: 2022/06/20 19:26:04 by bbourcy          ###   ########.fr       */
+/*   Updated: 2022/06/29 07:53:45 by bbourcy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../ft_game.h"
+#include "../so_long.h"
 
 int	ft_checkmap_lu(t_so_long *mygame)
 {

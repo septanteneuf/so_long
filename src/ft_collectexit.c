@@ -6,11 +6,11 @@
 /*   By: bbourcy <bbourcy@student.42lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/20 18:37:49 by bbourcy           #+#    #+#             */
-/*   Updated: 2022/06/20 19:25:53 by bbourcy          ###   ########.fr       */
+/*   Updated: 2022/06/29 07:53:39 by bbourcy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../ft_game.h"
+#include "../so_long.h"
 
 void	ft_countcol(t_so_long *mygame)
 {

@@ -1,19 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_game.h                                          :+:      :+:    :+:   */
+/*   so_long.h                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bbourcy <bbourcy@student.42lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/20 18:39:20 by bbourcy           #+#    #+#             */
-/*   Updated: 2022/06/20 19:36:12 by bbourcy          ###   ########.fr       */
+/*   Updated: 2022/06/29 07:56:04 by bbourcy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_GAME_H
-# define FT_GAME_H
+#ifndef SO_LONG_H
+# define SO_LONG_H
 
-# include "minilibx/mlx.h"
+# include "mlx/mlx.h"
 # include "libft/libft.h"
 # include "ft_printf/ft_printf.h"
 # include <unistd.h>
