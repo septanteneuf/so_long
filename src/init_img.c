@@ -1,18 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_img2_init.c                                      :+:      :+:    :+:   */
+/*   init_img.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bbourcy <bbourcy@student.42lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/20 18:40:00 by bbourcy           #+#    #+#             */
-/*   Updated: 2022/06/20 19:26:24 by bbourcy          ###   ########.fr       */
+/*   Updated: 2022/06/29 17:35:06 by bbourcy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../so_long.h"
 
-void	ft_init_img(t_so_long *mygame)
+//initializing the pictures
+void	init_img(t_so_long *mygame)
 {
 	mygame->rel_path_path = "./img/floor.xpm";
 	mygame->path = mlx_xpm_file_to_image(mygame->mlx, mygame->rel_path_path,
@@ -31,16 +32,18 @@ void	ft_init_img(t_so_long *mygame)
 			&mygame->i, &mygame->j);
 }
 
-void	ft_setplayer(int jwidth, int iheight, t_so_long *mygame)
+//setting the player coordinates
+void	set_player(int jwidth, int iheight, t_so_long *mygame)
 {
 	mygame->myplayer.horizontal = jwidth;
 	mygame->myplayer.vertical = iheight;
-	ft_paintplayer(jwidth, iheight, mygame);
+	paint_player(jwidth, iheight, mygame);
 }
 
-void	ft_setcollect(int jwidth, int iheight, t_so_long *mygame)
+//setting and counting up the collectibles
+void	set_collect(int jwidth, int iheight, t_so_long *mygame)
 {
 	mygame->colsum++;
 	mygame->collectible++;
-	ft_paint_collect(jwidth, iheight, mygame);
+	paint_collect(jwidth, iheight, mygame);
 }

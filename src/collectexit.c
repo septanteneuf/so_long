@@ -1,29 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_errorsquare.c                                   :+:      :+:    :+:   */
+/*   collectexit.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bbourcy <bbourcy@student.42lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/06/20 18:39:05 by bbourcy           #+#    #+#             */
-/*   Updated: 2022/06/29 07:53:52 by bbourcy          ###   ########.fr       */
+/*   Created: 2022/06/20 18:37:49 by bbourcy           #+#    #+#             */
+/*   Updated: 2022/06/29 17:29:12 by bbourcy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../so_long.h"
 
-int	ft_checksquare(t_so_long *mygame)
+//		counting the collectible
+void	count_col(t_so_long *mygame)
 {
-	int	index;
-	int	first_lwidth;
+	int	screencol;
 
-	first_lwidth = ft_strlen(mygame->map.map[0]);
-	index = 1;
-	while (index < mygame->img_height)
+	mygame->collectible--;
+	screencol = mygame->colsum - mygame->collectible;
+}
+
+void	check_col(t_so_long *mygame)
+{
+	if (mygame->collectible == 0)
 	{
-		if ((int)ft_strlen(mygame->map.map[index]) != first_lwidth)
-			return (-1);
-		index++;
+		exit (0);
 	}
-	return (0);
 }

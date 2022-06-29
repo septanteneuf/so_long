@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_errors.c                                        :+:      :+:    :+:   */
+/*   errors.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bbourcy <bbourcy@student.42lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/20 18:38:58 by bbourcy           #+#    #+#             */
-/*   Updated: 2022/06/29 07:53:45 by bbourcy          ###   ########.fr       */
+/*   Updated: 2022/06/29 17:38:41 by bbourcy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../so_long.h"
 
-int	ft_checkmap_lu(t_so_long *mygame)
+int	checkmap_lu(t_so_long *mygame)
 {
 	int	iheight;
 	int	jwidth;
@@ -36,7 +36,7 @@ int	ft_checkmap_lu(t_so_long *mygame)
 	return (0);
 }
 
-int	ft_checkmap_rd(t_so_long *mygame)
+int	checkmap_rd(t_so_long *mygame)
 {
 	int	iheight;
 	int	jwidth;
@@ -60,7 +60,7 @@ int	ft_checkmap_rd(t_so_long *mygame)
 	return (0);
 }
 
-int	ft_checkmap_in(t_so_long *mygame)
+int	checkmap_in(t_so_long *mygame)
 {
 	int		iheight;
 	int		jwidth;
@@ -83,7 +83,7 @@ int	ft_checkmap_in(t_so_long *mygame)
 	return (0);
 }
 
-int	ft_checkmin(t_so_long *mygame)
+int	check_min(t_so_long *mygame)
 {
 	int	iheight;
 	int	jwidth;
@@ -112,11 +112,11 @@ int	ft_checkmin(t_so_long *mygame)
 		return (0);
 }
 
-void	ft_errors(t_so_long *mygame)
+void	errors(t_so_long *mygame)
 {
-	if (ft_checkmap_lu(mygame) == -1 || ft_checkmap_rd(mygame) == -1
-		|| ft_checkmap_in(mygame) == -1 || ft_checkmin(mygame) == -1
-		|| ft_checksquare(mygame) == -1)
+	if (checkmap_lu(mygame) == -1 || checkmap_rd(mygame) == -1
+		|| checkmap_in(mygame) == -1 || check_min(mygame) == -1
+		|| check_square(mygame) == -1)
 	{
 		ft_printf("Error\n");
 		ft_printf("It seems there is a problem with your map \n");

@@ -7,11 +7,11 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 
 # This program built for i386-apple-darwin11.3.0
  
-make: *** 
-No rule to make target `src/ft_so_long.o', needed by `so_long'.  Stop.
+make: *** No rule to make target `src/init_img.o', needed by `so_long'.  Stop.
 
 
-# Make data base, printed on Wed Jun 29 07:56:00 2022
+# Make data base, printed on Wed Jun 29 16:56:38 2022
+ 
 
 # Variables
 
@@ -22,7 +22,7 @@ No rule to make target `src/ft_so_long.o', needed by `so_long'.  Stop.
 # makefile (from `Makefile', line 17)
 OBJ = $(SRC:.c=.o)
 # makefile (from `Makefile', line 7)
-SRC = src/ft_so_long.c src/ft_collectexit.c src/ft_errors.c src/ft_errorsquare.c src/ft_exitgame.c src/ft_img_init.c src/ft_movements.c src/ft_paintfct.c src/ft_updatemap.c 
+SRC = src/so_long.c src/collectexit.c src/errors.c src/errorsquare.c src/exitgame.c src/init_img.c src/moves.c src/paint.c src/updatemap.c 
 # environment
 VSCODE_LOG_NATIVE = false
 # automatic
@@ -40,19 +40,19 @@ VSCODE_NLS_CONFIG = {"locale":"fr","availableLanguages":{},"_languagePackSupport
 # environment
 _ = /usr/bin/make
 # makefile (from `Makefile', line 3)
-CFLAGS = -Wall -Werror -Wextra -g 
+CFLAGS = -Wall -Werror -Wextra 
 # makefile (from `Makefile', line 1)
 MAKEFILE_LIST :=  Makefile
 # environment
 VSCODE_VERBOSE_LOGGING = true
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /var/folders/xw/hhc3dmwx5z1b0nf2z2m00rx80000gn/T/vscode-ipc-1664bc90-4db0-45ac-a640-ba0a3b43727e.sock
+VSCODE_IPC_HOOK_EXTHOST = /var/folders/xw/hhc3dmwx5z1b0nf2z2m00rx80000gn/T/vscode-ipc-5287fca8-113b-4fce-981e-9b4bb8da00ac.sock
 # environment
 VSCODE_CWD = /
 # environment
 PATH = /usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
 # environment
-LaunchInstanceID = 2EEDC081-F78A-4D8C-860D-877DC1DC5427
+LaunchInstanceID = 1C605639-C12E-47E0-B82C-C13B2561172A
 # environment
 VSCODE_LOG_STACK = false
 # environment
@@ -60,7 +60,7 @@ ELECTRON_RUN_AS_NODE = 1
 # default
 .FEATURES := target-specific order-only second-expansion else-if archives jobserver check-symlink
 # environment
-SSH_AUTH_SOCK = /private/tmp/com.apple.launchd.ohIv7QGo0q/Listeners
+SSH_AUTH_SOCK = /private/tmp/com.apple.launchd.MLzu0qeVPe/Listeners
 # automatic
 %F = $(notdir $%)
 # environment
@@ -78,6 +78,7 @@ MAKEFILEPATH = $(shell /usr/bin/xcode-select -print-path 2>/dev/null || echo /De
 # environment
 VSCODE_CODE_CACHE_PATH = /Users/brunobourcy/Library/Application Support/Code/CachedData/30d9c6cd9483b2cc586687151bcbcd635f373630
 # environment
+ 
 LOGNAME = brunobourcy
 # environment
 APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = 1
@@ -150,7 +151,7 @@ MAKELEVEL := 0
 # environment
 LANG = C
 # environment
-VSCODE_PID = 344
+VSCODE_PID = 346
 # variable set hash-table stats:
 # Load=68/1024=7%, Rehash=0, Collisions=3/96=3%
 
@@ -160,7 +161,7 @@ VSCODE_PID = 344
 
 # Directories
 
-# . (device 16777225, inode 12934588101): 17 files, no impossibilities.
+# . (device 16777223, inode 12934588101): 17 files, no impossibilities.
 
 # 17 files, no impossibilities in 1 directories.
 
@@ -171,16 +172,32 @@ VSCODE_PID = 344
 # Files
 
 # Not a target:
-src/ft_errorsquare.o:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
+src/errorsquare.o:
+#  Implicit rule search has been done.
+#  Last modified 2022-06-29 16:56:16
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
 
 # Not a target:
-src/ft_paintfct.o:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
+src/collectexit.o:
+#  Implicit rule search has been done.
+ 
+#  Last modified 2022-06-29 16:56:15
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+# Not a target:
+src/errors.o:
+#  Implicit rule search has been done.
+#  Last modified 2022-06-29 16:56:16
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
 
 all: so_long
 #  Phony target (prerequisite of .PHONY).
@@ -191,19 +208,7 @@ all: so_long
 # variable set hash-table stats:
 # Load=0/32=0%, Rehash=0, Collisions=0/0=0%
 
-# Not a target:
-src/ft_errors.o:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
-
 .PHONY: all clean fclean re
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
-
-# Not a target:
-src/ft_img_init.o:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
@@ -217,25 +222,17 @@ src/ft_img_init.o:
 # Not a target:
 Makefile:
 #  Implicit rule search has been done.
-#  Last modified 2022-06-29 07:55:47
+#  Last modified 2022-06-29 16:56:08
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
 # Load=0/32=0%, Rehash=0, Collisions=0/0=0%
 
 # Not a target:
-src/ft_updatemap.o:
+src/updatemap.o:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
-
-# Not a target:
-src/ft_so_long.o:
-#  Implicit rule search has been done.
-#  File does not exist.
-#  File has not been updated.
-# variable set hash-table stats:
-# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
 
 fclean: clean
 #  Phony target (prerequisite of .PHONY).
@@ -249,13 +246,16 @@ fclean: clean
 	
 
 # Not a target:
-.DEFAULT:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
+src/so_long.o:
+#  Implicit rule search has been done.
+#  Last modified 2022-06-29 16:56:15
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
 
 # Not a target:
-src/ft_movements.o:
+.DEFAULT:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
@@ -277,7 +277,15 @@ clean:
 	rm -f $(OBJ)
 	
 
-so_long: src/ft_so_long.o src/ft_collectexit.o src/ft_errors.o src/ft_errorsquare.o src/ft_exitgame.o src/ft_img_init.o src/ft_movements.o src/ft_paintfct.o src/ft_updatemap.o
+# Not a target:
+src/init_img.o:
+#  Implicit rule search has been done.
+#  File does not exist.
+#  File has not been updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+so_long: src/so_long.o src/collectexit.o src/errors.o src/errorsquare.o src/exitgame.o src/init_img.o src/moves.o src/paint.o src/updatemap.o
 #  Implicit rule search has not been done.
 #  File does not exist.
 #  File has not been updated.
@@ -290,13 +298,22 @@ so_long: src/ft_so_long.o src/ft_collectexit.o src/ft_errors.o src/ft_errorsquar
 	
 
 # Not a target:
-src/ft_exitgame.o:
+src/moves.o:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
 
 # Not a target:
-src/ft_collectexit.o:
+src/exitgame.o:
+#  Implicit rule search has been done.
+#  Last modified 2022-06-29 16:56:16
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+# Not a target:
+src/paint.o:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
@@ -314,6 +331,6 @@ src/ft_collectexit.o:
 # strcache size: total = 4096 / max = 4096 / min = 4096 / avg = 4096
 # strcache free: total = 4087 / max = 4087 / min = 4087 / avg = 4087
 
-# Finished Make data base on Wed Jun 29 07:56:00 2022
+# Finished Make data base on Wed Jun 29 16:56:38 2022
 
  

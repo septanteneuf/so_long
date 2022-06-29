@@ -1,29 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_collectexit.c                                   :+:      :+:    :+:   */
+/*   errorsquare.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bbourcy <bbourcy@student.42lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/06/20 18:37:49 by bbourcy           #+#    #+#             */
-/*   Updated: 2022/06/29 07:53:39 by bbourcy          ###   ########.fr       */
+/*   Created: 2022/06/20 18:39:05 by bbourcy           #+#    #+#             */
+/*   Updated: 2022/06/29 17:38:23 by bbourcy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../so_long.h"
 
-void	ft_countcol(t_so_long *mygame)
+int	check_square(t_so_long *mygame)
 {
-	int	screencol;
+	int	index;
+	int	first_lwidth;
 
-	mygame->collectible--;
-	screencol = mygame->colsum - mygame->collectible;
-}
-
-void	ft_checkcol(t_so_long *mygame)
-{
-	if (mygame->collectible == 0)
+	first_lwidth = ft_strlen(mygame->map.map[0]);
+	index = 1;
+	while (index < mygame->img_height)
 	{
-		exit (0);
+		if ((int)ft_strlen(mygame->map.map[index]) != first_lwidth)
+			return (-1);
+		index++;
 	}
+	return (0);
 }

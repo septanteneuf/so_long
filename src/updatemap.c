@@ -1,18 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_updatemap.c                                     :+:      :+:    :+:   */
+/*   updatemap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bbourcy <bbourcy@student.42lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/20 18:42:29 by bbourcy           #+#    #+#             */
-/*   Updated: 2022/06/29 07:54:35 by bbourcy          ###   ########.fr       */
+/*   Updated: 2022/06/29 17:33:57 by bbourcy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../so_long.h"
 
-void	ft_updatemap(int x, int y, t_so_long *mypath)
+//		for updatiing the map
+void	update_map(int x, int y, t_so_long *mypath)
 {
 	int	y_next;
 	int	x_next;
@@ -34,7 +35,7 @@ void	ft_updatemap(int x, int y, t_so_long *mypath)
 	}
 }
 
-void	ft_currentfield(int x, int y, t_so_long *mypath)
+void	current_field(int x, int y, t_so_long *mypath)
 {
 	int	y_next;
 	int	x_next;
@@ -43,20 +44,20 @@ void	ft_currentfield(int x, int y, t_so_long *mypath)
 	x_next = mypath->myplayer.horizontal;
 	if (mypath->map.map[y][x] == 'E' || mypath->map.map[y][x] == 'G')
 	{
-		ft_paintexit(x, y, mypath);
-		ft_paintplayer(x_next, y_next, mypath);
-		ft_paintpath(x, y, mypath);
-		ft_paintexit(x, y, mypath);
+		paint_exit(x, y, mypath);
+		paint_player(x_next, y_next, mypath);
+		paint_path(x, y, mypath);
+		paint_exit(x, y, mypath);
 	}
 	else
 	{
-		ft_paintpath(x, y, mypath);
+		paint_path(x, y, mypath);
 		if (mypath->map.map[y_next][x_next] == 'E')
 		{
-			ft_paintpath(x, y, mypath);
-			ft_paintexit(x, y, mypath);
+			paint_path(x, y, mypath);
+			paint_exit(x, y, mypath);
 		}
 		else
-			ft_paintplayer(x_next, y_next, mypath);
+			paint_player(x_next, y_next, mypath);
 	}
 }
