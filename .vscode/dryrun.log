@@ -1,12 +1,16 @@
 make --dry-run --keep-going --print-directory
 make: Entering directory `/Volumes/MacFD - Données/Users/79Prod/42/cursus/rank2/so_long'
+gcc -Wall -Werror -Wextra    -c -o src/so_long.o src/so_long.c
+gcc -Wall -Werror -Wextra    -c -o src/check_collect.o src/check_collect.c
+gcc -Wall -Werror -Wextra    -c -o src/check_errors.o src/check_errors.c
+gcc -Wall -Werror -Wextra    -c -o src/check_error_square.o src/check_error_square.c
  
+gcc -Wall -Werror -Wextra    -c -o src/exit_game.o src/exit_game.c
 gcc -Wall -Werror -Wextra    -c -o src/init_img.o src/init_img.c
 gcc -Wall -Werror -Wextra    -c -o src/moves.o src/moves.c
- 
-make: *** No rule to make target `src/exitgame.o', needed by `so_long'.
-
 gcc -Wall -Werror -Wextra    -c -o src/paint.o src/paint.c
-gcc -Wall -Werror -Wextra    -c -o src/updatemap.o src/updatemap.c
+ 
 make: Leaving directory `/Volumes/MacFD - Données/Users/79Prod/42/cursus/rank2/so_long'
  
+make: *** No rule to make target `src/update_map.o', needed by `so_long'.
+

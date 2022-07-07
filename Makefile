@@ -8,11 +8,11 @@ SRC		=	src/so_long.c \
 			src/check_collect.c \
 			src/check_errors.c \
 			src/check_error_square.c \
-			src/exitgame.c \
+			src/exit_game.c \
 			src/init_img.c \
 			src/moves.c \
 			src/paint.c \
-			src/updatemap.c \
+			src/update_map.c \
 
 OBJ 	=	$(SRC:.c=.o)
 
