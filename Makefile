@@ -5,9 +5,9 @@ CFLAGS	=	-Wall -Werror -Wextra #-g -fsanitize=address -Wdeprecated-declarations
 NAME	=	so_long 
 
 SRC		=	src/so_long.c \
-			src/collectexit.c \
-			src/errors.c \
-			src/errorsquare.c \
+			src/check_collect.c \
+			src/check_errors.c \
+			src/check_error_square.c \
 			src/exitgame.c \
 			src/init_img.c \
 			src/moves.c \

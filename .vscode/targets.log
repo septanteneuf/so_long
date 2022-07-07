@@ -7,11 +7,10 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 
 # This program built for i386-apple-darwin11.3.0
  
-make: *** No rule to make target `src/init_img.o', needed by `so_long'.  Stop.
+make: *** No rule to make target `src/exitgame.o', needed by `so_long'.  Stop.
 
 
-# Make data base, printed on Wed Jun 29 16:56:38 2022
- 
+# Make data base, printed on Thu Jul  7 15:48:56 2022
 
 # Variables
 
@@ -22,7 +21,7 @@ make: *** No rule to make target `src/init_img.o', needed by `so_long'.  Stop.
 # makefile (from `Makefile', line 17)
 OBJ = $(SRC:.c=.o)
 # makefile (from `Makefile', line 7)
-SRC = src/so_long.c src/collectexit.c src/errors.c src/errorsquare.c src/exitgame.c src/init_img.c src/moves.c src/paint.c src/updatemap.c 
+SRC = src/so_long.c src/check_collect.c src/check_errors.c src/check_error_square.c src/exitgame.c src/init_img.c src/moves.c src/paint.c src/updatemap.c 
 # environment
 VSCODE_LOG_NATIVE = false
 # automatic
@@ -46,13 +45,13 @@ MAKEFILE_LIST :=  Makefile
 # environment
 VSCODE_VERBOSE_LOGGING = true
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /var/folders/xw/hhc3dmwx5z1b0nf2z2m00rx80000gn/T/vscode-ipc-5287fca8-113b-4fce-981e-9b4bb8da00ac.sock
+VSCODE_IPC_HOOK_EXTHOST = /var/folders/xw/hhc3dmwx5z1b0nf2z2m00rx80000gn/T/vscode-ipc-a72bc8af-eb59-401f-b9a2-7764a342cc5a.sock
 # environment
 VSCODE_CWD = /
 # environment
 PATH = /usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
 # environment
-LaunchInstanceID = 1C605639-C12E-47E0-B82C-C13B2561172A
+LaunchInstanceID = 01317536-C6BB-4AFE-AB14-D2BE66C4EC92
 # environment
 VSCODE_LOG_STACK = false
 # environment
@@ -60,7 +59,7 @@ ELECTRON_RUN_AS_NODE = 1
 # default
 .FEATURES := target-specific order-only second-expansion else-if archives jobserver check-symlink
 # environment
-SSH_AUTH_SOCK = /private/tmp/com.apple.launchd.MLzu0qeVPe/Listeners
+SSH_AUTH_SOCK = /private/tmp/com.apple.launchd.1P4aQOI3MM/Listeners
 # automatic
 %F = $(notdir $%)
 # environment
@@ -78,7 +77,6 @@ MAKEFILEPATH = $(shell /usr/bin/xcode-select -print-path 2>/dev/null || echo /De
 # environment
 VSCODE_CODE_CACHE_PATH = /Users/brunobourcy/Library/Application Support/Code/CachedData/30d9c6cd9483b2cc586687151bcbcd635f373630
 # environment
- 
 LOGNAME = brunobourcy
 # environment
 APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = 1
@@ -151,7 +149,7 @@ MAKELEVEL := 0
 # environment
 LANG = C
 # environment
-VSCODE_PID = 346
+VSCODE_PID = 349
 # variable set hash-table stats:
 # Load=68/1024=7%, Rehash=0, Collisions=3/96=3%
 
@@ -161,7 +159,7 @@ VSCODE_PID = 346
 
 # Directories
 
-# . (device 16777223, inode 12934588101): 17 files, no impossibilities.
+# . (device 16777230, inode 12934588101): 17 files, no impossibilities.
 
 # 17 files, no impossibilities in 1 directories.
 
@@ -172,28 +170,9 @@ VSCODE_PID = 346
 # Files
 
 # Not a target:
-src/errorsquare.o:
+src/check_collect.o:
 #  Implicit rule search has been done.
-#  Last modified 2022-06-29 16:56:16
-#  File has been updated.
-#  Successfully updated.
-# variable set hash-table stats:
-# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
-
-# Not a target:
-src/collectexit.o:
-#  Implicit rule search has been done.
- 
-#  Last modified 2022-06-29 16:56:15
-#  File has been updated.
-#  Successfully updated.
-# variable set hash-table stats:
-# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
-
-# Not a target:
-src/errors.o:
-#  Implicit rule search has been done.
-#  Last modified 2022-06-29 16:56:16
+#  Last modified 2022-07-07 15:48:44
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -222,7 +201,7 @@ all: so_long
 # Not a target:
 Makefile:
 #  Implicit rule search has been done.
-#  Last modified 2022-06-29 16:56:08
+#  Last modified 2022-07-07 15:48:17
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -246,9 +225,18 @@ fclean: clean
 	
 
 # Not a target:
+src/check_error_square.o:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-07 15:48:44
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+# Not a target:
 src/so_long.o:
 #  Implicit rule search has been done.
-#  Last modified 2022-06-29 16:56:15
+#  Last modified 2022-07-07 15:48:44
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -279,13 +267,20 @@ clean:
 
 # Not a target:
 src/init_img.o:
-#  Implicit rule search has been done.
-#  File does not exist.
+#  Implicit rule search has not been done.
+#  Modification time never checked.
 #  File has not been updated.
+
+# Not a target:
+src/check_errors.o:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-07 15:48:44
+#  File has been updated.
+#  Successfully updated.
 # variable set hash-table stats:
 # Load=0/32=0%, Rehash=0, Collisions=0/0=0%
 
-so_long: src/so_long.o src/collectexit.o src/errors.o src/errorsquare.o src/exitgame.o src/init_img.o src/moves.o src/paint.o src/updatemap.o
+so_long: src/so_long.o src/check_collect.o src/check_errors.o src/check_error_square.o src/exitgame.o src/init_img.o src/moves.o src/paint.o src/updatemap.o
 #  Implicit rule search has not been done.
 #  File does not exist.
 #  File has not been updated.
@@ -306,9 +301,8 @@ src/moves.o:
 # Not a target:
 src/exitgame.o:
 #  Implicit rule search has been done.
-#  Last modified 2022-06-29 16:56:16
-#  File has been updated.
-#  Successfully updated.
+#  File does not exist.
+#  File has not been updated.
 # variable set hash-table stats:
 # Load=0/32=0%, Rehash=0, Collisions=0/0=0%
 
@@ -329,8 +323,9 @@ src/paint.o:
 # # of strings in strcache: 1
 # # of strcache buffers: 1
 # strcache size: total = 4096 / max = 4096 / min = 4096 / avg = 4096
+ 
 # strcache free: total = 4087 / max = 4087 / min = 4087 / avg = 4087
 
-# Finished Make data base on Wed Jun 29 16:56:38 2022
+# Finished Make data base on Thu Jul  7 15:48:56 2022
 
  
