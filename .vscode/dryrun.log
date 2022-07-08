@@ -1,14 +1,15 @@
-make --dry-run --always-make --keep-going --print-directory
+make --dry-run --keep-going --print-directory
 make: Entering directory `/Users/bbourcy/42/cursus/rank2/so_long'
 gcc -Wall -Werror -Wextra    -c -o src/so_long.o src/so_long.c
+ 
 gcc -Wall -Werror -Wextra    -c -o src/check_collect.o src/check_collect.c
 gcc -Wall -Werror -Wextra    -c -o src/check_errors.o src/check_errors.c
 gcc -Wall -Werror -Wextra    -c -o src/check_error_square.o src/check_error_square.c
 gcc -Wall -Werror -Wextra    -c -o src/exit_game.o src/exit_game.c
 gcc -Wall -Werror -Wextra    -c -o src/init_img.o src/init_img.c
- 
 gcc -Wall -Werror -Wextra    -c -o src/moves.o src/moves.c
 gcc -Wall -Werror -Wextra    -c -o src/paint.o src/paint.c
+ 
 gcc -Wall -Werror -Wextra    -c -o src/update_map.o src/update_map.c
 make -C ft_printf
 make -C libft

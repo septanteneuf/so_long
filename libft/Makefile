@@ -7,18 +7,20 @@ NAME		=	libft.a
 SRC			=	ft_strdup.c ft_strjoin.c ft_strlen.c \
 				ft_substr.c gnl.c gnl_utils.c \
 
+OBJS		=	${SRC:.c=.o}
+
 all:			$(NAME)
 
 $(NAME):
 				$(CC) $(FLAGS) -c $(SRC)
-				ar rc $(NAME) *.o
+				ar rc $(NAME) ${OBJS}
 
 clean:
-				rm -f *.o *.out
+				rm -f ${OBJS}
 
 fclean:			clean
-				rm -f $(NAME)
+				rm -f $(NAME) ${OBJS}
 
-re:				fclean $(NAME)
+re:				fclean $(NAME) ${OBJS}
 
 .PHONY: 		all clean fclean re
