@@ -1,6 +1,6 @@
 CC		=	gcc
 
-CFLAGS	=	-Wall -Werror -Wextra #-g -fsanitize=address -Wdeprecated-declarations
+CFLAGS	=	-Wall -Werror -Wextra
 
 NAME	=	so_long 
 
@@ -19,18 +19,11 @@ OBJ 	=	$(SRC:.c=.o)
 all: 		$(NAME)
 
 $(NAME) : 	$(OBJ)
-#			make -C mlx
 			make -C ft_printf
 			make -C libft
-#			$(CC) $(CFLAGS) $(SRC) ft_printf/libftprintf.a libft/libft.a mlx/libmlx.a -Lmlx -lmlx -framework OpenGL -framework AppKit -o $(NAME)
 			$(CC) $(CFLAGS) $(SRC) ft_printf/libftprintf.a libft/libft.a -Lmlx -lmlx -framework OpenGL -framework AppKit -o $(NAME)
 
-
-# %.o : %.c
-# 			${CC} ${FLAGS} -c $< -o ${<:.c=.o}
-
 clean:
-#			make clean -C mlx
 			make clean -C ft_printf
 			make clean -C libft
 			rm -f $(OBJ)
