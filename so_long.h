@@ -6,7 +6,7 @@
 /*   By: bbourcy <bbourcy@student.42lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/20 18:39:20 by bbourcy           #+#    #+#             */
-/*   Updated: 2022/07/10 10:33:52 by bbourcy          ###   ########.fr       */
+/*   Updated: 2022/07/15 11:43:28 by bbourcy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,12 +22,12 @@
 # include <errno.h>
 # include <stdio.h>
 
-typedef struct	s_map
+typedef struct s_map
 {
 	char	**map;
 }				t_map;
 
-typedef struct	s_player
+typedef struct s_player
 {
 	int		horizontal;
 	int		vertical;
@@ -35,7 +35,7 @@ typedef struct	s_player
 
 }				t_player;
 
-typedef struct	s_errors
+typedef struct s_errors
 {
 	int		colcount;
 	int		plycount;
@@ -43,7 +43,7 @@ typedef struct	s_errors
 
 }				t_errors;
 
-typedef struct	s_so_long
+typedef struct s_so_long
 {
 	t_map		map;
 	t_player	myplayer;

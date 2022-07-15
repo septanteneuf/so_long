@@ -6,7 +6,7 @@
 /*   By: bbourcy <bbourcy@student.42lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/20 18:42:29 by bbourcy           #+#    #+#             */
-/*   Updated: 2022/07/10 10:33:51 by bbourcy          ###   ########.fr       */
+/*   Updated: 2022/07/15 13:14:47 by bbourcy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ void	update_map(int x, int y, t_so_long *mypath)
 
 	y_next = mypath->myplayer.vertical;
 	x_next = mypath->myplayer.horizontal;
-	if (mypath->map.map[y][x] == 'E' || mypath->map.map[y][x] == 'G')
+	if (mypath->map.map[y][x] == 'E' || mypath->map.map[y][x] == 'C')
 	{
 		mypath->map.map[y][x] = 'E';
 		mypath->map.map[y_next][x_next] = 'P';
@@ -29,7 +29,7 @@ void	update_map(int x, int y, t_so_long *mypath)
 	{
 		mypath->map.map[y][x] = '0';
 		if (mypath->map.map[y_next][x_next] == 'E')
-			mypath->map.map[y_next][x_next] = 'G';
+			mypath->map.map[y_next][x_next] = 'C';
 		else
 			mypath->map.map[y_next][x_next] = 'P';
 	}
@@ -42,7 +42,7 @@ void	current_field(int x, int y, t_so_long *mypath)
 
 	y_next = mypath->myplayer.vertical;
 	x_next = mypath->myplayer.horizontal;
-	if (mypath->map.map[y][x] == 'E' || mypath->map.map[y][x] == 'G')
+	if (mypath->map.map[y][x] == 'E' || mypath->map.map[y][x] == 'C')
 	{
 		paint_exit(x, y, mypath);
 		paint_player(x_next, y_next, mypath);

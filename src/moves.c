@@ -6,7 +6,7 @@
 /*   By: bbourcy <bbourcy@student.42lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/20 18:40:07 by bbourcy           #+#    #+#             */
-/*   Updated: 2022/07/10 10:33:17 by bbourcy          ###   ########.fr       */
+/*   Updated: 2022/07/15 13:32:11 by bbourcy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,7 @@ void	up(t_so_long *mygame)
 
 	height = mygame->myplayer.vertical;
 	width = mygame->myplayer.horizontal;
-	if (mygame->map.map[height - 1][width] == '0'
-		|| mygame->map.map[height - 1][width] == 'C')
+	if (mygame->map.map[height - 1][width] != '1' && mygame->map.map[height - 1][width] != 'E')
 	{
 		if (mygame->map.map[height - 1][width] == 'C')
 			count_col(mygame);
@@ -49,8 +48,7 @@ void	left(t_so_long *mygame)
 
 	height = mygame->myplayer.vertical;
 	width = mygame->myplayer.horizontal;
-	if (mygame->map.map[height][width - 1] == '0'
-		|| mygame->map.map[height][width - 1] == 'C')
+	if (mygame->map.map[height][width - 1] != '1' && mygame->map.map[height][width - 1] != 'E')
 	{
 		if (mygame->map.map[height][width - 1] == 'C')
 			count_col(mygame);
@@ -78,8 +76,7 @@ void	bottom(t_so_long *mygame)
 
 	height = mygame->myplayer.vertical;
 	width = mygame->myplayer.horizontal;
-	if (mygame->map.map[height + 1][width] == '0'
-		|| mygame->map.map[height + 1][width] == 'C')
+	if (mygame->map.map[height + 1][width] != '1' && mygame->map.map[height + 1][width] != 'E')
 	{
 		if (mygame->map.map[height + 1][width] == 'C')
 			count_col(mygame);
@@ -107,8 +104,7 @@ void	right(t_so_long *mygame)
 
 	height = mygame->myplayer.vertical;
 	width = mygame->myplayer.horizontal;
-	if (mygame->map.map[height][width + 1] == '0'
-		|| mygame->map.map[height][width + 1] == 'C')
+	if (mygame->map.map[height][width + 1] != '1' && mygame->map.map[height][width + 1] != 'E')
 	{
 		if (mygame->map.map[height][width + 1] == 'C')
 			count_col(mygame);

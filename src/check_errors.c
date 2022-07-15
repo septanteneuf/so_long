@@ -6,7 +6,7 @@
 /*   By: bbourcy <bbourcy@student.42lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/20 18:38:58 by bbourcy           #+#    #+#             */
-/*   Updated: 2022/07/08 18:11:43 by bbourcy          ###   ########.fr       */
+/*   Updated: 2022/07/15 13:12:22 by bbourcy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -95,7 +95,7 @@ int	check_min(t_so_long *mygame)
 		while (width < mygame->img_width)
 		{
 			if (mygame->map.map[height][width] == 'P')
-				mygame->maperrors.plycount++;
+				mygame->maperrors.plycount = 1;
 			else if (mygame->map.map[height][width] == 'C')
 				mygame->maperrors.colcount++;
 			else if (mygame->map.map[height][width] == 'E')
