@@ -1,6 +1,7 @@
 make --dry-run --always-make --keep-going --print-directory
 make: Entering directory `/Users/bbourcy/42/cursus/rank2/so_long'
 gcc -Wall -Werror -Wextra   -c -o src/so_long.o src/so_long.c
+ 
 gcc -Wall -Werror -Wextra   -c -o src/check_collect.o src/check_collect.c
 gcc -Wall -Werror -Wextra   -c -o src/check_errors.o src/check_errors.c
 gcc -Wall -Werror -Wextra   -c -o src/check_error_square.o src/check_error_square.c
