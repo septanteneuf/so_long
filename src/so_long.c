@@ -6,7 +6,7 @@
 /*   By: bbourcy <bbourcy@student.42lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/20 18:40:23 by bbourcy           #+#    #+#             */
-/*   Updated: 2022/07/20 11:51:30 by bbourcy          ###   ########.fr       */
+/*   Updated: 2022/07/20 13:42:48 by bbourcy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,6 @@ void	read_map(t_so_long *mygame, char **argv)
 	int		line_nbr;
 	char	*str;
 
-
 	line_nbr = count_map_unit(argv);
 	if (!line_nbr)
 		exit_game("no map", mygame);
@@ -57,7 +56,6 @@ void	read_map(t_so_long *mygame, char **argv)
 	mygame->img_width = ft_strlen(mygame->map.map[0]);
 	close(fd_nbr);
 }
-
 
 void	map_base(t_so_long *mygame)
 {
@@ -108,6 +106,8 @@ int	main(int argc, char **argv)
 {
 	t_so_long	mygame;
 
+	mygame.maperrors.colcount = 0;
+	mygame.maperrors.extcount = 0;
 	if (argc != 2)
 		return (0);
 	memset(&mygame, 0, sizeof(t_so_long));

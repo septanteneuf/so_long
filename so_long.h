@@ -6,7 +6,7 @@
 /*   By: bbourcy <bbourcy@student.42lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/20 18:39:20 by bbourcy           #+#    #+#             */
-/*   Updated: 2022/07/20 11:44:18 by bbourcy          ###   ########.fr       */
+/*   Updated: 2022/07/20 13:35:29 by bbourcy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -111,6 +111,7 @@ int		checkmap_rd(t_so_long *mygame);
 int		checkmap_in(t_so_long *mygame);
 int		check_min(t_so_long *mygame);
 int		check_square(t_so_long *mygame);
+int		check_width(t_so_long *mygame);
 
 //		exit game
 int		exit_game(char *str, __unused t_so_long *mygame);

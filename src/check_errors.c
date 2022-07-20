@@ -6,7 +6,7 @@
 /*   By: bbourcy <bbourcy@student.42lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/20 18:38:58 by bbourcy           #+#    #+#             */
-/*   Updated: 2022/07/20 11:53:59 by bbourcy          ###   ########.fr       */
+/*   Updated: 2022/07/20 13:41:43 by bbourcy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,26 +32,6 @@ int	checkmap_lu(t_so_long *mygame)
 		if (mygame->map.map[height][width] != '1')
 			return (0);
 		width++;
-	}
-	return (1);
-}
-
-int	test(t_so_long *mygame)
-{
-	int	x;
-	int	y;
-
-	x = 0;
-	while(x < mygame->img_height)
-	{
-		y = 0;
-		while (mygame->map.map[x][y])
-		{
-			y++;
-		}
-		if (y != mygame->img_width)
-			return (0);
-		x++;
 	}
 	return (1);
 }
@@ -110,8 +90,6 @@ int	check_min(t_so_long *mygame)
 
 	height = 0;
 	width = 0;
-	mygame->maperrors.colcount = 0;
-	mygame->maperrors.extcount = 0;
 	while (height < mygame->img_height)
 	{
 		while (width < mygame->img_width)
@@ -136,13 +114,13 @@ int	check_min(t_so_long *mygame)
 
 void	errors(t_so_long *mygame)
 {
-	if(!test(mygame))
+	if (!check_width(mygame))
 		exit_game("Wrong width", mygame);
 	if (!check_min(mygame))
 		exit_game("Missing element", mygame);
 	if (!checkmap_lu(mygame))
 		exit_game("Wrong wall pos", mygame);
-	if(!checkmap_rd(mygame))
+	if (!checkmap_rd(mygame))
 		exit_game("Wrong wall pos (also)", mygame);
 	if (!checkmap_in(mygame))
 		exit_game("Wrong walls/other", mygame);

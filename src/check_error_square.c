@@ -6,7 +6,7 @@
 /*   By: bbourcy <bbourcy@student.42lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/20 18:39:05 by bbourcy           #+#    #+#             */
-/*   Updated: 2022/07/20 09:37:54 by bbourcy          ###   ########.fr       */
+/*   Updated: 2022/07/20 13:43:28 by bbourcy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,3 +29,22 @@ int	check_square(t_so_long *mygame)
 	return (1);
 }
 
+int	check_width(t_so_long *mygame)
+{
+	int	x;
+	int	y;
+
+	x = 0;
+	while (x < mygame->img_height)
+	{
+		y = 0;
+		while (mygame->map.map[x][y])
+		{
+			y++;
+		}
+		if (y != mygame->img_width)
+			return (0);
+		x++;
+	}
+	return (1);
+}
