@@ -3,6 +3,9 @@
 	"files.associations": {
 		"ft_printf.h": "c",
 		"__config": "c",
-		"locale": "c"
+		"locale": "c",
+		"stdarg.h": "c",
+		"so_long.h": "c",
+		"unistd.h": "c"
 	}
 }

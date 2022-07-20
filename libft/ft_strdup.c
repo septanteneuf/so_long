@@ -6,7 +6,7 @@
 /*   By: bbourcy <bbourcy@student.42lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/03 13:51:51 by bbourcy           #+#    #+#             */
-/*   Updated: 2022/07/08 15:44:20 by bbourcy          ###   ########.fr       */
+/*   Updated: 2022/07/20 11:40:02 by bbourcy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ char	*ft_strdup(const char	*s)
 	i = 0;
 	dst = malloc(sizeof(char) * (ft_strlen(s) +1));
 	if (!dst)
-		return (NULL);
+		return (0);
 	while (*(s + i) != '\0')
 	{
 		dst[i] = s[i];

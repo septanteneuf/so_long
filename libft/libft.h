@@ -6,14 +6,14 @@
 /*   By: bbourcy <bbourcy@student.42lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/08 15:23:09 by bbourcy           #+#    #+#             */
-/*   Updated: 2022/07/08 15:43:40 by bbourcy          ###   ########.fr       */
+/*   Updated: 2022/07/20 11:39:39 by bbourcy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 # define BUFFER_SIZE 50
-# include <stddef.h>
+
 # include <stdlib.h>
 # include <unistd.h>
 

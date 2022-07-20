@@ -6,7 +6,7 @@
 /*   By: bbourcy <bbourcy@student.42lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/20 18:39:05 by bbourcy           #+#    #+#             */
-/*   Updated: 2022/07/08 18:11:44 by bbourcy          ###   ########.fr       */
+/*   Updated: 2022/07/20 09:37:54 by bbourcy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,9 @@ int	check_square(t_so_long *mygame)
 	while (index < mygame->img_height)
 	{
 		if ((int)ft_strlen(mygame->map.map[index]) != first_lwidth)
-			return (-1);
+			return (0);
 		index++;
 	}
-	return (0);
+	return (1);
 }
+

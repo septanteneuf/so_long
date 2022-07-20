@@ -8,7 +8,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # This program built for i386-apple-darwin11.3.0
  
 
-# Make data base, printed on Tue Jul 19 16:52:36 2022
+# Make data base, printed on Wed Jul 20 11:37:18 2022
 
 # Variables
 
@@ -35,7 +35,7 @@ VSCODE_NLS_CONFIG = {"locale":"en-us","availableLanguages":{},"_languagePackSupp
 # environment
 _ = /usr/bin/make
 # makefile (from `Makefile', line 3)
-CFLAGS = -Wall -Werror -Wextra
+CFLAGS = -Wall -Werror -Wextra -fsanitize=address -g3
 # makefile (from `Makefile', line 1)
 MAKEFILE_LIST :=  Makefile
 # environment
@@ -47,7 +47,7 @@ ELECTRON_RUN_AS_NODE = 1
 # default
 .FEATURES := target-specific order-only second-expansion else-if archives jobserver check-symlink
 # environment
-SSH_AUTH_SOCK = /private/tmp/com.apple.launchd.dpNmLLIRXD/Listeners
+SSH_AUTH_SOCK = /private/tmp/com.apple.launchd.rm6kmfVjqO/Listeners
 # automatic
 %F = $(notdir $%)
 # environment
@@ -110,12 +110,13 @@ MallocNanoZone = 0
 MAKEFLAGS = Rrqp
 # environment
 MFLAGS = -Rrqp
+ 
 # automatic
 *D = $(patsubst %/,%,$(dir $*))
 # environment
 MAIL = bbourcy@student.42lausanne.ch
 # environment
-XPC_SERVICE_NAME = com.microsoft.VSCode.2180
+XPC_SERVICE_NAME = com.microsoft.VSCode.1148
 # automatic
 +D = $(patsubst %/,%,$(dir $+))
 # automatic
@@ -139,7 +140,7 @@ MAKELEVEL := 0
 # environment
 LANG = C
 # environment
-VSCODE_PID = 41974
+VSCODE_PID = 5291
 # variable set hash-table stats:
 # Load=64/1024=6%, Rehash=0, Collisions=3/92=3%
 
@@ -149,9 +150,9 @@ VSCODE_PID = 41974
 
 # Directories
 
-# . (device 16777225, inode 1606340): 16 files, no impossibilities.
+# . (device 16777225, inode 1606340): 19 files, no impossibilities.
 
-# 16 files, no impossibilities in 1 directories.
+# 19 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
@@ -161,16 +162,20 @@ VSCODE_PID = 41974
 
 # Not a target:
 src/check_collect.o:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
+#  Implicit rule search has been done.
+#  Last modified 2022-07-20 11:36:50
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
 
 all: so_long
 #  Phony target (prerequisite of .PHONY).
 #  Command-line target.
 #  Implicit rule search has not been done.
 #  File does not exist.
-#  File has not been updated.
+#  File has been updated.
+#  Successfully updated.
 # variable set hash-table stats:
 # Load=0/32=0%, Rehash=0, Collisions=0/0=0%
 
@@ -188,7 +193,7 @@ all: so_long
 # Not a target:
 Makefile:
 #  Implicit rule search has been done.
-#  Last modified 2022-07-15 10:23:35
+#  Last modified 2022-07-20 11:36:49
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -196,15 +201,21 @@ Makefile:
 
 # Not a target:
 src/exit_game.o:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
+#  Implicit rule search has been done.
+#  Last modified 2022-07-20 11:36:51
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
 
 # Not a target:
 src/update_map.o:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
+#  Implicit rule search has been done.
+#  Last modified 2022-07-20 11:36:51
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
 
 fclean: clean
 #  Phony target (prerequisite of .PHONY).
@@ -219,15 +230,19 @@ fclean: clean
 
 # Not a target:
 src/check_error_square.o:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
+#  Implicit rule search has been done.
+#  Last modified 2022-07-20 11:36:51
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
 
 # Not a target:
 src/so_long.o:
 #  Implicit rule search has been done.
-#  File does not exist.
-#  File has not been updated.
+#  Last modified 2022-07-20 11:36:50
+#  File has been updated.
+#  Successfully updated.
 # variable set hash-table stats:
 # Load=0/32=0%, Rehash=0, Collisions=0/0=0%
 
@@ -256,20 +271,27 @@ clean:
 
 # Not a target:
 src/init_img.o:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
+#  Implicit rule search has been done.
+#  Last modified 2022-07-20 11:36:51
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
 
 # Not a target:
 src/check_errors.o:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
+#  Implicit rule search has been done.
+#  Last modified 2022-07-20 11:36:50
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
 
 so_long: src/so_long.o src/check_collect.o src/check_errors.o src/check_error_square.o src/exit_game.o src/init_img.o src/moves.o src/paint.o src/update_map.o
 #  Implicit rule search has not been done.
-#  File does not exist.
-#  File has not been updated.
+#  Last modified 2022-07-20 11:36:52
+#  File has been updated.
+#  Successfully updated.
 # variable set hash-table stats:
 # Load=0/32=0%, Rehash=0, Collisions=0/0=0%
 #  commands to execute (from `Makefile', line 22):
@@ -280,15 +302,21 @@ so_long: src/so_long.o src/check_collect.o src/check_errors.o src/check_error_sq
 
 # Not a target:
 src/moves.o:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
+#  Implicit rule search has been done.
+#  Last modified 2022-07-20 11:36:51
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
 
 # Not a target:
 src/paint.o:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
+#  Implicit rule search has been done.
+#  Last modified 2022-07-20 11:36:51
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
 
 # files hash-table stats:
 # Load=18/1024=2%, Rehash=0, Collisions=0/48=0%
@@ -303,8 +331,6 @@ src/paint.o:
 # strcache size: total = 4096 / max = 4096 / min = 4096 / avg = 4096
 # strcache free: total = 4087 / max = 4087 / min = 4087 / avg = 4087
 
-# Finished Make data base on Tue Jul 19 16:52:36 2022
+# Finished Make data base on Wed Jul 20 11:37:18 2022
 
  
-make: *** No rule to make target `src/so_long.o', needed by `so_long'.  Stop.
-

@@ -6,7 +6,7 @@
 /*   By: bbourcy <bbourcy@student.42lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/20 18:39:20 by bbourcy           #+#    #+#             */
-/*   Updated: 2022/07/15 11:43:28 by bbourcy          ###   ########.fr       */
+/*   Updated: 2022/07/20 11:44:18 by bbourcy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,6 +76,9 @@ typedef struct s_so_long
 
 }				t_so_long;
 
+// test tgoel
+int ft_strlen_cmp(char **map, char n);
+
 //		initializing the pictures
 void	init_img(t_so_long *mygame);
 //		setting the player coordinates
@@ -110,7 +113,7 @@ int		check_min(t_so_long *mygame);
 int		check_square(t_so_long *mygame);
 
 //		exit game
-int		exit_game(void);
+int		exit_game(char *str, __unused t_so_long *mygame);
 
 //		counting the collectible
 void	count_col(t_so_long *mygame);

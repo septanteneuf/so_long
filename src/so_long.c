@@ -6,7 +6,7 @@
 /*   By: bbourcy <bbourcy@student.42lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/20 18:40:23 by bbourcy           #+#    #+#             */
-/*   Updated: 2022/07/08 18:04:45 by bbourcy          ###   ########.fr       */
+/*   Updated: 2022/07/20 11:51:30 by bbourcy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,10 @@ void	read_map(t_so_long *mygame, char **argv)
 	int		line_nbr;
 	char	*str;
 
+
 	line_nbr = count_map_unit(argv);
+	if (!line_nbr)
+		exit_game("no map", mygame);
 	fd_nbr = open(argv[1], O_RDONLY);
 	mygame->map.map = (char **)malloc(line_nbr * sizeof(char *));
 	line_nbr = 0;
@@ -50,10 +53,11 @@ void	read_map(t_so_long *mygame, char **argv)
 		mygame->map.map[line_nbr] = str;
 		line_nbr++;
 	}
-	close(fd_nbr);
 	mygame->img_height = line_nbr;
 	mygame->img_width = ft_strlen(mygame->map.map[0]);
+	close(fd_nbr);
 }
+
 
 void	map_base(t_so_long *mygame)
 {
@@ -108,10 +112,10 @@ int	main(int argc, char **argv)
 		return (0);
 	memset(&mygame, 0, sizeof(t_so_long));
 	read_map(&mygame, argv);
+	errors(&mygame);
 	mygame.mlx = mlx_init();
 	mygame.window = mlx_new_window(mygame.mlx, (mygame.img_width * 100),
 			(mygame.img_height * 100), "so_long");
-	errors(&mygame);
 	init_img(&mygame);
 	map_base(&mygame);
 	paint_map(&mygame);

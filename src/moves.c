@@ -6,7 +6,7 @@
 /*   By: bbourcy <bbourcy@student.42lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/20 18:40:07 by bbourcy           #+#    #+#             */
-/*   Updated: 2022/07/19 16:54:51 by bbourcy          ###   ########.fr       */
+/*   Updated: 2022/07/20 10:34:09 by bbourcy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -140,6 +140,6 @@ int	player_move(int keycode, t_so_long *mygame)
 	if (keycode == 2 || keycode == 124)
 		right(mygame);
 	if (keycode == 53)
-		exit_game();
+		exit_game("Game closed properly", mygame);
 	return (0);
 }
